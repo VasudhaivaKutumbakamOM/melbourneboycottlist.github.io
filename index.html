@@ -2,9 +2,33 @@
 <html>
   <head>
     <titleBoycott Separatists - Lets make world an inclusive place. Its time to fight seperatists ideology.</title>
+    <script>
+      function searchFunction() {
+        // Get the input value
+        var input = document.getElementById("searchInput").value.toLowerCase();
+        // Get the list items
+        var listItems = document.getElementsByTagName("li");
+
+        // Loop through all list items
+        for (var i = 0; i < listItems.length; i++) {
+          // Get the current list item text
+          var listItem = listItems[i].innerHTML.toLowerCase();
+
+          // Check if the input value is present in the list item text
+          if (listItem.indexOf(input) > -1) {
+            // Show the list item
+            listItems[i].style.display = "block";
+          } else {
+            // Hide the list item
+            listItems[i].style.display = "none";
+          }
+        }
+      }
+    </script>
   </head>
   <body>
     <h1>Boycott Separatists - Lets make world an inclusive place. Its time to fight seperatists ideology.</h1>
+    <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Search for businesses...">
     <ul>
       <li>NeoTech motors hoppers crossing</li>
       <li>D kebab Hoppers</li>
